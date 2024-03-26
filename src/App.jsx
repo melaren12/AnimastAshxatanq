@@ -13,7 +13,7 @@ function App() {
     <>
       <main>
         <Header />
-        <Section></Section>
+        <Section />
       </main>
     </>
   )

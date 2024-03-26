@@ -1,13 +1,7 @@
 export default function PacketsSection() {
   return (
-    <>
-      <p>P</p>
-      <p>P</p>
-      <p>P</p>
-      <p>P</p>
-      <p>P</p>
-      <p>P</p>
-    </>
-
+    <section>
+      <h2>Packets</h2>
+    </section>
   )
 }

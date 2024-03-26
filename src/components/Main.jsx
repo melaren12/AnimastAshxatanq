@@ -5,11 +5,9 @@ import './Main.css'
 
 export default function Main() {
   return (
-    <>
-      <section className="glx">
-        <Menu></Menu>
-        <Section></Section>
-      </section>
-    </>
+    <section className="glx">
+      <Menu></Menu>
+      <Section></Section>
+    </section>
   )
 }
