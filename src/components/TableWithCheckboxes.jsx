@@ -1,54 +1,53 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class TableWithCheckboxes extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [
-        { id: 1, name: 'John Doe', age: 30, location: 'New York', selected: false },
-        { id: 2, name: 'Jane Smith', age: 25, location: 'San Francisco', selected: false }
-      ]
-    };
-  }
+const TableWithCheckboxes = () => {
+  // Sample data
+  const data = [
+    { id: 1, name: 'Item 1', selected: false },
+    { id: 2, name: 'Item 2', selected: false },
+    { id: 3, name: 'Item 3', selected: false },
+    { id: 4, name: 'Item 4', selected: false },
+    { id: 5, name: 'Item 5', selected: false },
+  ];
 
-  handleCheckboxChange = (id) => {
-    this.setState({
-      data: this.state.data.map(item =>
-        item.id === id ? { ...item, selected: !item.selected } : item
-      )
+  // State to manage selected checkboxes
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  // Function to handle checkbox toggle
+  const handleCheckboxToggle = (itemId) => {
+    setSelectedItems(prevSelected => {
+      if (prevSelected.includes(itemId)) {
+        return prevSelected.filter(id => id !== itemId);
+      } else {
+        return [...prevSelected, itemId];
+      }
     });
-  }
+  };
 
-  render() {
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Location</th>
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Select</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map(item => (
+          <tr key={item.id}>
+            <td>{item.name}</td>
+            <td>
+              <input
+                type="checkbox"
+                checked={selectedItems.includes(item.id)}
+                onChange={() => handleCheckboxToggle(item.id)}
+              />
+            </td>
           </tr>
-        </thead>
-        <tbody>
-          {this.state.data.map((item) => (
-            <tr key={item.id}>
-              <td>
-                <input
-                  type="checkbox"
-                  checked={item.selected}
-                  onChange={() => this.handleCheckboxChange(item.id)}
-                />
-              </td>
-              <td>{item.name}</td>
-              <td>{item.age}</td>
-              <td>{item.location}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    );
-  }
-}
+        ))}
+      </tbody>
+    </table>
+  );
+};
 
 export default TableWithCheckboxes;
