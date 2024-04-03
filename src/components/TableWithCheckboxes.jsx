@@ -1,53 +1,42 @@
-import React, { useState } from 'react';
+import React from "react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
 
-const TableWithCheckboxes = () => {
-  // Sample data
-  const data = [
-    { id: 1, name: 'Item 1', selected: false },
-    { id: 2, name: 'Item 2', selected: false },
-    { id: 3, name: 'Item 3', selected: false },
-    { id: 4, name: 'Item 4', selected: false },
-    { id: 5, name: 'Item 5', selected: false },
-  ];
-
-  // State to manage selected checkboxes
-  const [selectedItems, setSelectedItems] = useState([]);
-
-  // Function to handle checkbox toggle
-  const handleCheckboxToggle = (itemId) => {
-    setSelectedItems(prevSelected => {
-      if (prevSelected.includes(itemId)) {
-        return prevSelected.filter(id => id !== itemId);
-      } else {
-        return [...prevSelected, itemId];
-      }
-    });
-  };
+export default function TableWithCheckboxes() {
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Select</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map(item => (
-          <tr key={item.id}>
-            <td>{item.name}</td>
-            <td>
-              <input
-                type="checkbox"
-                checked={selectedItems.includes(item.id)}
-                onChange={() => handleCheckboxToggle(item.id)}
-              />
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="flex flex-col gap-3">
+      <Table
+        selectionMode="multiple"
+        aria-label="Example static collection table"
+      >
+        <TableHeader>
+          <TableColumn>NAME</TableColumn>
+          <TableColumn>ROLE</TableColumn>
+          <TableColumn>STATUS</TableColumn>
+        </TableHeader>
+        <TableBody>
+          <TableRow key="1">
+            <TableCell>Tony Reichert</TableCell>
+            <TableCell>CEO</TableCell>
+            <TableCell>Active</TableCell>
+          </TableRow>
+          <TableRow key="2">
+            <TableCell>Zoey Lang</TableCell>
+            <TableCell>Technical Lead</TableCell>
+            <TableCell>Paused</TableCell>
+          </TableRow>
+          <TableRow key="3">
+            <TableCell>Jane Fisher</TableCell>
+            <TableCell>Senior Developer</TableCell>
+            <TableCell>Active</TableCell>
+          </TableRow>
+          <TableRow key="4">
+            <TableCell>William Howard</TableCell>
+            <TableCell>Community Manager</TableCell>
+            <TableCell>Vacation</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </div>
   );
-};
-
-export default TableWithCheckboxes;
+}

@@ -8,7 +8,7 @@
 #root {
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
+  /* text-align: center; */
 }
 
 header {
@@ -19,6 +19,7 @@ header {
   background-color: var(--header);
 }
 
+/* 
 table {
   width: 100%;
   border-collapse: collapse;
@@ -43,4 +44,4 @@ tbody tr:nth-child(even) {
 
 input[type="checkbox"] {
   cursor: pointer;
-}
+} */
