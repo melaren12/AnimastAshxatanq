@@ -18,30 +18,3 @@ header {
   align-items: center;
   background-color: var(--header);
 }
-
-/* 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: Arial, sans-serif;
-}
-
-thead th {
-  background-color: #f2f2f2;
-  border-bottom: 2px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-tbody td {
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-input[type="checkbox"] {
-  cursor: pointer;
-} */
