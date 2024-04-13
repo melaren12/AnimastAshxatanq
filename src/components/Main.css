@@ -7,10 +7,9 @@
 }
 
 .sec {
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 200px;
   background-color: var(--blue);
-  margin-right: 50px;
 }
 
 

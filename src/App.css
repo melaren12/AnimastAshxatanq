@@ -18,3 +18,49 @@ header {
   align-items: center;
   background-color: var(--header);
 }
+
+.table {
+  width: 100%;
+}
+
+.table-parent {
+  margin: 0 50px;
+}
+
+.toolbar {
+  margin: 20px 50px;
+}
+
+.karmir {
+  width: 400px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(400px);
+  transition: transform 0.2s linear;
+}
+
+.karmir.bacvac {
+  transform: translateX(0px);
+}
+
+.control {
+  border: 1px solid #ccc;
+  background: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 300px;
+  margin: 50px;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  margin: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+}

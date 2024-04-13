@@ -1,27 +1,29 @@
-import React from "react";
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
+import useInput from "../useInput";
+import { Button } from "@nextui-org/react";
 
-export default function App() {
-
+export default function Pordz({ bacvac, lav }) {
+  const name = useInput()
+  const id = useInput()
+  const handleConfirm = () => {
+    lav({
+      name: name.value,
+      id: id.value
+    })
+  }
   return (
-    <Dropdown>
-      <DropdownTrigger>
-        <Button  
-          className="capitalize"
-        >
-          Open
+    <div className={
+      'karmir ' + (bacvac ? 'bacvac' : '')
+    }>
+      <input type="text" className="control" {...name} />
+      <input type="text" className="control" {...id} />
+      <div className="buttons">
+        <Button color="primary">
+          Close
         </Button>
-      </DropdownTrigger>
-      <DropdownMenu 
-        aria-label="Multiple selection example"
-        style={{width: '300px', color: 'black'}}
-      >
-        <DropdownItem key="text">Text</DropdownItem>
-        <DropdownItem key="number">Number</DropdownItem>
-        <DropdownItem key="date">Date</DropdownItem>
-        <DropdownItem key="single_date">Single Date</DropdownItem>
-        <DropdownItem key="iteration">Iteration</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
-  );
+        <Button color="primary" onClick={handleConfirm}>
+          Confirm
+        </Button>
+      </div>
+    </div>
+  )
 }
