@@ -6,11 +6,9 @@ import { useState, useEffect, useCallback } from "react";
 
 const filtering = (filters, allData) => {
   let filteredData = []
-  allData.forEach((user) => {
-    if( user.name.toLowerCase().includes(filters.name.toLowerCase()))
-  }
-   
-  )
+  // allData.forEach((user) => {
+  //   if( user.name.toLowerCase().includes(filters.name.toLowerCase()))
+  // })
   return filteredData
 }
 
@@ -40,13 +38,16 @@ export default function PacketsSection() {
       setFilters(newFilters)
   }
   return (
-    <section style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+    <section className="main-section packets-section">
       <div className="toolbar">
         <Button isIconOnly aria-label="Like" onClick={() => setActive(true)}>
           <FontAwesomeIcon icon="fa-solid fa-filter" />
         </Button>
       </div>
-      <TableWithCheckboxes tableData={users} />
+      <div className="packets-container">
+        <TableWithCheckboxes tableData={users} />
+      </div>
+      
       <Pordz bacvac={active} lav={Arr}></Pordz>
     </section>
   )

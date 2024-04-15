@@ -1,22 +1,48 @@
-@import './Colors.css';
-
 .glx {
   display: flex;
-  background-color: var(--lightBlue);
-  color: var(--black);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: calc(100vh - var(--header-height));
 }
 
-.sec {
-  height: calc(100vh - 50px);
+.navbar {
+  height: 100%;
   width: 200px;
-  background-color: var(--blue);
+  background-color: var(--second-color);
 }
 
+.main-section {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+}
+
+.centered-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .link {
   text-decoration: none;
   display: block;
   width: 100%;
   text-align: center;
-  background-color: var(--blue);
+  background-color: var(--second-color);
+}
+
+.link.active {
+  background-color: var(--background-color);
+}
+
+.packets-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.packets-container {
+  flex: 1;
+  overflow: auto;
+  padding: 10px 0;
 }

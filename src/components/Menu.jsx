@@ -1,5 +1,5 @@
 import './Main.css'
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { useState } from 'react'
 import Button from './Button/Button';
 
@@ -11,47 +11,47 @@ export default function Menu() {
   }
   return (
     <>
-      <section className="sec">
-        <Link to="/" className="link" >
+      <section className="navbar">
+        <NavLink to="/" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
           <Button
             isActive={contentType === 'home'}
             onClick={() => handleClick('home')}
           >
             Home
           </Button>
-        </Link>
-        <Link to="/alert" className="link">
+        </NavLink>
+        <NavLink to="/alert" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
           <Button
             isActive={contentType === 'alert'}
             onClick={() => handleClick('alert')}
           >
             Alert
           </Button>
-        </Link>
-        <Link to="/graphic" className="link">
+        </NavLink>
+        <NavLink to="/graphic" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
           <Button
             isActive={contentType === 'graphic'}
             onClick={() => handleClick('graphic')}
           >
             Graphic
           </Button>
-        </Link>
-        <Link to="/packets" className="link">
+        </NavLink>
+        <NavLink to="/packets" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
           <Button
             isActive={contentType === 'packets'}
             onClick={() => handleClick('packets')}
           >
             Packets
           </Button>
-        </Link>
-        <Link to="/settings" className="link">
+        </NavLink>
+        <NavLink to="/settings" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
           <Button
             isActive={contentType === 'settings'}
             onClick={() => handleClick('settings')}
           >
             Settings
           </Button>
-        </Link>
+        </NavLink>
       </section>
       <Outlet />
     </>
