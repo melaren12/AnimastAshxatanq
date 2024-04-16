@@ -1,14 +1,18 @@
 import useInput from "../useInput";
 import { Button } from "@nextui-org/react";
 
-export default function Pordz({ bacvac, lav }) {
+export default function Pordz({ bacvac, lav, bac }) {
   const name = useInput()
   const id = useInput()
   const handleConfirm = () => {
+    console.log('lav', lav);
     lav({
       name: name.value,
       id: id.value
     })
+  }
+  const handleClose = () => {
+    bac(false)
   }
   return (
     <div className={
@@ -17,7 +21,7 @@ export default function Pordz({ bacvac, lav }) {
       <input type="text" className="control" {...name} />
       <input type="text" className="control" {...id} />
       <div className="buttons">
-        <Button color="primary">
+        <Button color="primary" onClick={handleClose}>
           Close
         </Button>
         <Button color="primary" onClick={handleConfirm}>

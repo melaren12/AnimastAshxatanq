@@ -8,10 +8,10 @@ library.add(fas)
 function App() {
 
   return (
-      <main>
-        <Header />
-        <Section />
-      </main>
+    <main>
+      <Header />
+      <Section />
+    </main>
   )
 }
 

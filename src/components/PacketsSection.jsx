@@ -13,13 +13,14 @@ const filtering = (filters, allData) => {
 }
 
 
-export default function PacketsSection() {
+export default function PacketsSection(props) {
   const [active, setActive] = useState(false)
   const [users, setUsers] = useState([])
   const [filteredUsers, setFilteredUsers] = useState([])
   const [filters, setFilters] = useState({})
 
   useEffect(() => {
+    props.makeItBlack(active)
     async function getUsers() {
       const response = await fetch('https://jsonplaceholder.typicode.com/users')
       const users = await response.json()
@@ -33,22 +34,32 @@ export default function PacketsSection() {
     getUsers()
   }, [filters])
 
+  function Aren(newCost) {
+    setActive(newCost)
+    props.makeItBlack(newCost)
+  }
+
+  function opened() {
+    setActive(true)
+    props.makeItBlack(true)
+  }
+
 
   function Arr(newFilters) {
-      setFilters(newFilters)
+    setFilters(newFilters)
   }
   return (
     <section className="main-section packets-section">
       <div className="toolbar">
-        <Button isIconOnly aria-label="Like" onClick={() => setActive(true)}>
+        <Button isIconOnly aria-label="Like" onClick={opened}>
           <FontAwesomeIcon icon="fa-solid fa-filter" />
         </Button>
       </div>
       <div className="packets-container">
         <TableWithCheckboxes tableData={users} />
       </div>
-      
-      <Pordz bacvac={active} lav={Arr}></Pordz>
+      <Pordz bacvac={active} lav={Arr} bac={Aren}></Pordz>
+
     </section>
   )
 }
