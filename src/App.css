@@ -107,13 +107,20 @@ header {
 
 .about {
   width: 100%;
+  margin-bottom: 10px;
   flex: 1;
-  border-radius: 15px;
-  background-color: black;
+  border-radius: 10px;
+  border-inline-start: 1px solid #f0f0f0;
+  background-color: rgb(243, 242, 242);
+  display: none;
+  position: relative;
 }
 .about.ab {
-  width: 100%;
-  background-color: rgb(211, 3, 3);
+  display: block;
+}
+
+.about p {
+  padding: 30px;
 }
 
 .relative {
@@ -134,5 +141,11 @@ header {
 
 .input.show {
   display: flex;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 

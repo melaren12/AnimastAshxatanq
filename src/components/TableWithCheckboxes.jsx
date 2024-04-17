@@ -2,13 +2,14 @@ import React from "react";
 import { Table } from 'antd';
 import eye from '/eye.svg'
 import { useState } from "react";
+import { CloseOutlined } from "@ant-design/icons";
 
 export default function TableWithCheckboxes({ tableData }) {
   const [about, setAbout] = useState(false)
   const handleClick = () => {
     console.log('about');
-    setAbout(true)
-    setYScroll(true)
+    setAbout(!about)
+    setYScroll(!yScroll)
   }
 
   const [yScroll, setYScroll] = useState(false);
@@ -79,6 +80,8 @@ export default function TableWithCheckboxes({ tableData }) {
         size="small"
       />
       <div className={"about " + (about ? 'ab' : '')}>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam non dolores, unde quas veritatis aliquid, nesciunt molestias enim fugit ratione minima! Error eos ipsam ex molestiae nihil, quis at.</p>
+        <CloseOutlined className="close" onClick={handleClick}/>
       </div>
     </div>
   );
