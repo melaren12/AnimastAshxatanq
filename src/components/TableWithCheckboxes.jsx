@@ -8,6 +8,14 @@ export default function TableWithCheckboxes({ tableData }) {
   const handleClick = () => {
     console.log('about');
     setAbout(true)
+    setYScroll(true)
+  }
+
+  const [yScroll, setYScroll] = useState(false);
+
+  const scroll = {};
+  if (yScroll) {
+    scroll.y = 240;
   }
 
   const prostoData = tableData.map((obj) => {
@@ -44,9 +52,10 @@ export default function TableWithCheckboxes({ tableData }) {
     width: 'auto',
     dataIndex: 'name',
   }, {
-    title: 'Info',
+    title: 'Action',
     width: 'auto',
-    dataIndex: 'name',
+    dataIndex: 'id',
+    render: (id) => <img src={eye} alt="Eye" onClick={handleClick} style={{cursor: 'pointer'}}/>,
   }]
 
   return (
@@ -54,10 +63,8 @@ export default function TableWithCheckboxes({ tableData }) {
     <div className="table-parent">
       <Table
         columns={columns}
-        dataSource={prostoData}
-        scroll={{
-          y: 240,
-        }}
+        dataSource={tableData}
+        scroll={scroll}
         // scroll={{
         //   x: 1300,
         // }}

@@ -18,8 +18,11 @@ export default function Pordz({ bacvac, lav, bac }) {
     <div className={
       'karmir ' + (bacvac ? 'bacvac' : '')
     }>
-      <input type="text" className="control" {...name} />
-      <input type="text" className="control" {...id} />
+      <input type="text" className="control" placeholder="Id" {...id} />
+      <input type="text" className="control" placeholder="Protocol" {...name} />
+      <input type="text" className="control" placeholder="Source" {...name} />
+      <input type="text" className="control" placeholder="Destination" {...name} />
+      <input type="text" className="control" placeholder="Lenghth" {...name} />
       <div className="buttons">
         <Button type="default" size='default' onClick={handleClose}>
           Close
