@@ -30,14 +30,20 @@ header {
 
 .table {
   width: 100%;
+  flex: 1;
+  overflow: scroll;
+  max-height: 100px;
 }
 
 .table-parent {
   margin: 0 50px;
+  height: calc(100vh - 102px);
+  display: flex;
+  flex-direction: column;
 }
 
 .toolbar {
-  margin: 20px 50px;
+  margin: 10px 50px;
 }
 
 .karmir {
@@ -102,7 +108,9 @@ header {
 
 .about {
   width: 100%;
-  height: 60px;
+  /* height: 60px; */
+  flex: 1;
+  border-radius: 15px;
   background-color: black;
 }
 .about.ab {

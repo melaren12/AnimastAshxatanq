@@ -11,11 +11,15 @@ export default function TableWithCheckboxes({ tableData }) {
   }
   return (
 
-    <div className="flex flex-col gap-3 table-parent">
+    <div className="table-parent">
       <Table
+        isHeaderSticky
         selectionMode="multiple"
         aria-label="Example static collection table"
-        className="table"
+        classNames={{
+          base: "max-h-[200px] overflow-scroll",
+          table: "max-h-[100px]",
+        }}
       >
         <TableHeader>
           <TableColumn>ID</TableColumn>
@@ -23,7 +27,9 @@ export default function TableWithCheckboxes({ tableData }) {
           <TableColumn>STATUS</TableColumn>
           <TableColumn>STATUS</TableColumn>
         </TableHeader>
-        <TableBody>
+        <TableBody
+          items={tableData}
+        >
 
           {tableData.map((user) => (
             <TableRow key={user.id}>

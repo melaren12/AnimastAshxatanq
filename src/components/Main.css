@@ -44,7 +44,7 @@
 .packets-container {
   flex: 1;
   overflow: auto;
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 
 

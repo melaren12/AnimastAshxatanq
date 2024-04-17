@@ -6,7 +6,6 @@ export default function HomeSection() {
       <h3>Choose WiFi</h3>
       <Select
         label="Favorite WiFi"
-        placeholder="Select an animal"
         className="max-w-xs"
       >
        <SelectItem >dfbdfb</SelectItem>

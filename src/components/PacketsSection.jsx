@@ -51,7 +51,7 @@ export default function PacketsSection(props) {
   return (
     <section className="main-section packets-section">
       <div className="toolbar">
-        <Button isIconOnly aria-label="Like" onClick={opened}>
+        <Button size="sm" isIconOnly aria-label="Like" onClick={opened} style={{ width: '10px' }}>
           <FontAwesomeIcon icon="fa-solid fa-filter" />
         </Button>
       </div>
@@ -59,7 +59,6 @@ export default function PacketsSection(props) {
         <TableWithCheckboxes tableData={users} />
       </div>
       <Pordz bacvac={active} lav={Arr} bac={Aren}></Pordz>
-
     </section>
   )
 }
