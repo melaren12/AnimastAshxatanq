@@ -20,22 +20,6 @@ export default function Menu() {
             Home
           </Button>
         </NavLink>
-        <NavLink to="/alert" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
-          <Button
-            isActive={contentType === 'alert'}
-            onClick={() => handleClick('alert')}
-          >
-            Alert
-          </Button>
-        </NavLink>
-        <NavLink to="/graphic" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
-          <Button
-            isActive={contentType === 'graphic'}
-            onClick={() => handleClick('graphic')}
-          >
-            Graphic
-          </Button>
-        </NavLink>
         <NavLink to="/packets" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
           <Button
             isActive={contentType === 'packets'}
@@ -44,12 +28,28 @@ export default function Menu() {
             Packets
           </Button>
         </NavLink>
+        <NavLink to="/alert" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
+          <Button
+            isActive={contentType === 'alert'}
+            onClick={() => handleClick('alert')}
+          >
+            Important packets
+          </Button>
+        </NavLink>
+        <NavLink to="/graphic" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
+          <Button
+            isActive={contentType === 'graphic'}
+            onClick={() => handleClick('graphic')}
+          >
+            Rules
+          </Button>
+        </NavLink>
         <NavLink to="/settings" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
           <Button
             isActive={contentType === 'settings'}
             onClick={() => handleClick('settings')}
           >
-            Settings
+            Router information
           </Button>
         </NavLink>
       </section>
