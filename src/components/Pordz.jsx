@@ -1,4 +1,5 @@
 import useInput from "../useInput";
+import { Button } from 'antd';
 
 export default function Pordz({ bacvac, lav, bac }) {
   const name = useInput()
@@ -20,12 +21,12 @@ export default function Pordz({ bacvac, lav, bac }) {
       <input type="text" className="control" {...name} />
       <input type="text" className="control" {...id} />
       <div className="buttons">
-        {/* <Button color="primary" onClick={handleClose}>
+        <Button type="default" size='default' onClick={handleClose}>
           Close
         </Button>
-        <Button color="primary" onClick={handleConfirm}>
+        <Button type="default" size='default' onClick={handleConfirm}>
           Confirm
-        </Button> */}
+        </Button>
       </div>
     </div>
   )

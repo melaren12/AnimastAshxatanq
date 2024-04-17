@@ -2,17 +2,17 @@
   display: flex;
   background-color: var(--background-color);
   color: var(--text-color);
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - 60px);
 }
 
 .navbar {
-  height: 100%;
+  height: calc(100vh - 60px);
   width: 200px;
   background-color: var(--second-color);
 }
 
 .main-section {
-  height: 100%;
+  height: calc(100vh - 60px);
   overflow: hidden;
   position: relative;
   flex: 1;
@@ -32,8 +32,13 @@
   background-color: var(--second-color);
 }
 
+.link button {
+  color: black;
+}
+
 .link.active {
   background-color: var(--background-color);
+  color: black;
 }
 
 .packets-section {

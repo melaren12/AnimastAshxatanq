@@ -2,6 +2,7 @@ import TableWithCheckboxes from "./TableWithCheckboxes"
 import Pordz from "./Pordz"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState, useEffect, useCallback } from "react";
+import { Button} from 'antd';
 
 const filtering = (filters, allData) => {
   let filteredData = []
@@ -50,9 +51,9 @@ export default function PacketsSection(props) {
   return (
     <section className="main-section packets-section">
       <div className="toolbar">
-        {/* <Button size="sm" isIconOnly aria-label="Like" onClick={opened} style={{ width: '10px' }}>
+        <Button type="default" size='small'  onClick={opened}>
           <FontAwesomeIcon icon="fa-solid fa-filter" />
-        </Button> */}
+        </Button>
       </div>
       <div className="packets-container">
         <TableWithCheckboxes tableData={users} />
