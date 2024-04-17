@@ -12,20 +12,20 @@ export default function HomeSection() {
       label: 'Jack (100)',
     },
     {
-      value: 'lucy',
-      label: 'Lucy (101)',
+      value: 'Wi-Fi',
+      label: 'Wi-Fi',
     }
     ]
   return (
     <div className="home-section">
-      <h3>Choose WiFi</h3>
+      <h3 style={{position: 'relative', bottom: '30px'}}>Choose Your Access Point </h3>
       <div className="select">
         <Select
           labelInValue
-          defaultValue={{
-            value: 'lucy',
-            label: 'Lucy (101)',
-          }}
+          // defaultValue={{
+          //   value: 'Wi-Fi',
+          //   label: 'Wi-Fi',
+          // }}
           
           style={{
             width: 200,

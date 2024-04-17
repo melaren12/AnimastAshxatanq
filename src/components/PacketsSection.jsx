@@ -52,17 +52,19 @@ export default function PacketsSection(props) {
   return (
     <section className="main-section packets-section">
       <div className="toolbar">
-        <Button type="default" size='small' onClick={opened} style={{ margin: '0 10px' }}>
-          <FontAwesomeIcon icon="fa-solid fa-filter" />
-        </Button>
-        <Button type="default" size='small' onClick={opened} style={{ margin: '0 10px' }}>
-          <PlayCircleOutlined />
-        </Button>
-        <Button type="default" size='small' onClick={opened} style={{ margin: '0 10px' }}>
-          <PauseCircleOutlined />
-        </Button>
-        <Button type="default" size='small' onClick={opened} style={{ margin: '0 10px' }}>
-          <DownloadOutlined />
+        <div className="left-toolbar">
+          <Button type="default" size='default' style={{ margin: '0 5px 0 0' }}>
+            <PlayCircleOutlined style={{ fontSize: '20px'}}/>
+          </Button>
+          <Button type="default" size='default' style={{ margin: '0 5px' }}>
+            <PauseCircleOutlined style={{ fontSize: '20px'}}/>
+          </Button>
+          <Button type="default" size='default' style={{ margin: '0 5px' }}>
+            <DownloadOutlined style={{ fontSize: '20px'}}/>
+          </Button>
+        </div>
+        <Button type="default" size='default' onClick={opened} style={{ margin: '0' }}>
+          <FontAwesomeIcon icon="fa-solid fa-filter" style={{ fontSize: '20px'}}/>
         </Button>
 
       </div>

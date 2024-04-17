@@ -29,7 +29,7 @@ header {
 }
 
 .table-parent {
-  margin: 0 50px;
+  margin: 0 30px;
   height: 100%;
   /* height: calc(100vh - 102px); */
   display: flex;
@@ -42,7 +42,9 @@ header {
 }
 
 .toolbar {
-  margin: 10px 50px;
+  margin: 10px 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .karmir {
@@ -67,7 +69,7 @@ header {
   border-radius: 5px;
   padding: 0.5rem 1rem;
   width: 300px;
-  margin: 50px;
+  margin: 15px;
   margin-bottom: 1rem;
 }
 
@@ -119,7 +121,7 @@ header {
   display: block;
 }
 
-.about p {
+.about pre {
   padding: 30px;
 }
 
@@ -132,7 +134,7 @@ header {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  gap: 100px;
+  gap: 20px;
 }
 
 .input {
