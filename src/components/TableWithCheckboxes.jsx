@@ -50,8 +50,7 @@ export default function TableWithCheckboxes({ tableData }) {
       Urgent Pointer: 0
       [Timestamps]
       [SEQ/ACK analysis]`
-
-  const ourData = [{
+  const ourData2 = [{
     id: 45,
     protocol: 'TCP',
     source: '192.168.0.1',
@@ -170,6 +169,32 @@ export default function TableWithCheckboxes({ tableData }) {
     sourcePort: 53,
     destination: '192.168.0.194',
     destinationPort: 50333,
+    length: 54
+  }]
+
+  const ourData = [{
+    id: 1,
+    protocol: 'TCP',
+    source: '192.168.0.1',
+    sourcePort: 53,
+    destination: '192.168.0.194',
+    destinationPort: 50333,
+    length: 54
+  }, {
+    id: 2,
+    protocol: 'UDP',
+    source: '192.168.0.194',
+    sourcePort: 53591,
+    destination: '66.22.238.14',
+    destinationPort: 50014,
+    length: 127
+  }, {
+    id: 3,
+    protocol: 'TCP',
+    source: '192.168.0.194',
+    sourcePort: 56673,
+    destination: '192.168.0.1',
+    destinationPort: 53,
     length: 54
   }]
 

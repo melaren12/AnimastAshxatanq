@@ -13,7 +13,7 @@ export default function Back({ bacvac }) {
   }, [bacvac])
   return (
     <section className={'back ' + (bacvac ? 'background' : '')}
-      style={height ? { height: 'calc(100vh - 50px)' } : {}}>
+      style={height ? { height: 'calc(100vh - 60px)' } : {}}>
     </section>
   )
 }
