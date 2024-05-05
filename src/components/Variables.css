@@ -1,4 +1,4 @@
-:root {
+body {
   --background-color: #ffffff;
   --text-color: #000000;
   --button-background-color: #fca311;
@@ -7,4 +7,13 @@
   --button-text-color: #14213d;
 
   --header-height: 50px;
+}
+
+body.dark {
+  --background-color: #5e5959;
+  --text-color: #000000;
+  --button-background-color: #fca311;
+  --button-background-color-hover: #fbad2f;
+  --second-color: #524e4e;
+  --button-text-color: #14213d;
 }

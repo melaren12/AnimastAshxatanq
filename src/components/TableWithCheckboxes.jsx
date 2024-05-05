@@ -29,9 +29,9 @@ export default function TableWithCheckboxes({ tableData }) {
   const text = `Frame 2073: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{13D11F63-8151-4EE3-B815-E1B0AE93D01D}, id 0
   Ethernet II, Src: TPLink_0f:9e:b0 (50:91:e3:0f:9e:b0), Dst: CloudNetwork_9f:3f:8d (74:97:79:9f:3f:8d)
   Internet Protocol Version 4, Src: 192.168.0.1, Dst: 192.168.0.194
-  Transmission Control Protocol, Src Port: 53, Dst Port: 56672, Seq: 1, Ack: 36, Len: 0
+  Transmission Control Protocol, Src Port: 53, Dst Port: 50333, Seq: 1, Ack: 36, Len: 0
       Source Port: 53
-      Destination Port: 56672
+      Destination Port: 50333
       [Stream index: 5]
       [Conversation completeness: Complete, WITH_DATA (31)]
       [TCP Segment Len: 0]
@@ -198,7 +198,7 @@ export default function TableWithCheckboxes({ tableData }) {
     length: 54
   }]
 
-  const finalData = ourData.map((obj) => {
+  const finalData = ourData2.map((obj) => {
     obj.key = obj.id;
     return obj;
   });
@@ -259,8 +259,14 @@ export default function TableWithCheckboxes({ tableData }) {
         size="small"
       />
       <div className={"about " + (about ? 'ab' : '')}>
-        <pre>{text}</pre>
-        <CloseOutlined className="close" onClick={handleClick} />
+        <div className="about-container">
+          <div className="header">
+            <CloseOutlined className="close" onClick={handleClick} />
+          </div>
+          <div className="abbody" style={{ overflow: 'auto' }}>
+            <pre >{text}</pre>
+          </div>
+        </div>
       </div>
     </div>
   );
