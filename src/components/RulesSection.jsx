@@ -1,7 +1,4 @@
-import TableWithCheckboxes from "./TableWithCheckboxes"
 import Pordz from "./Pordz"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState, useEffect, useCallback } from "react";
 import { Table } from 'antd';
 import { Button } from 'antd';
 import { DeleteOutlined, PlusOutlined } from "@ant-design/icons";

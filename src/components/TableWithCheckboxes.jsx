@@ -1,8 +1,8 @@
 import React from "react";
-import { Table } from 'antd';
+import { Space, Table } from 'antd';
 import eye from '/eye.svg'
 import { useState } from "react";
-import { CloseOutlined } from "@ant-design/icons";
+import { CloseOutlined, PlusOutlined } from "@ant-design/icons";
 
 export default function TableWithCheckboxes({ tableData }) {
   const [about, setAbout] = useState(false)
@@ -235,39 +235,44 @@ export default function TableWithCheckboxes({ tableData }) {
     title: 'Action',
     width: 'auto',
     dataIndex: 'id',
-    render: (id) => <img src={eye} alt="Eye" onClick={handleClick} style={{ cursor: 'pointer' }} />,
+    render: (id) => (
+      <Space size={'middle'} style={{display: 'flex', justifyContent: 'space-between'}}>
+        < img src={ eye } alt="Eye" onClick={ handleClick } style={{ cursor: 'pointer' }} />
+        <PlusOutlined style={{ fontSize: '20px', cursor: 'pointer' }}/>
+      </Space>)
+      
   }]
 
-  return (
+return (
 
-    <div className="table-parent">
-      <Table
-        columns={columns}
-        dataSource={finalData}
-        scroll={scroll}
-        // scroll={{
-        //   x: 1300,
-        // }}
-        rowSelection={{
+  <div className="table-parent">
+    <Table
+      columns={columns}
+      dataSource={finalData}
+      scroll={scroll}
+      // scroll={{
+      //   x: 1300,
+      // }}
+      rowSelection={{
         type: 'checkbox',
-      columnWidth: '32px',
-      fixed: true
-        }}
+        columnWidth: '32px',
+        fixed: true
+      }}
       pagination={false}
       bordered
       className="table"
       size="small"
-      />
-      <div className={"about " + (about ? 'ab' : '')}>
-        <div className="about-container">
-          <div className="header">
-            <CloseOutlined className="close" onClick={handleClick} />
-          </div>
-          <div className="abbody" style={{ overflow: 'auto' }}>
-            <pre >{text}</pre>
-          </div>
+    />
+    <div className={"about " + (about ? 'ab' : '')}>
+      <div className="about-container">
+        <div className="header">
+          <CloseOutlined className="close" onClick={handleClick} />
+        </div>
+        <div className="abbody" style={{ overflow: 'auto' }}>
+          <pre >{text}</pre>
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }
