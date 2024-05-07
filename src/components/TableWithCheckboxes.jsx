@@ -249,14 +249,14 @@ export default function TableWithCheckboxes({ tableData }) {
         //   x: 1300,
         // }}
         rowSelection={{
-          type: 'checkbox',
-          columnWidth: '32px',
-          fixed: true
+        type: 'checkbox',
+      columnWidth: '32px',
+      fixed: true
         }}
-        pagination={false}
-        bordered
-        className="table"
-        size="small"
+      pagination={false}
+      bordered
+      className="table"
+      size="small"
       />
       <div className={"about " + (about ? 'ab' : '')}>
         <div className="about-container">

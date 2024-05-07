@@ -10,10 +10,10 @@ body {
 }
 
 body.dark {
-  --background-color: #5e5959;
-  --text-color: #000000;
+  --background-color: #504f4f;
+  --text-color: #fdfbfb;
   --button-background-color: #fca311;
   --button-background-color-hover: #fbad2f;
-  --second-color: #524e4e;
+  --second-color: #161616;
   --button-text-color: #14213d;
 }

@@ -11,6 +11,11 @@
   background-color: var(--second-color);
 }
 
+.navbar p {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
 .main-section {
   height: calc(100vh - 60px);
   overflow: hidden;

@@ -21,8 +21,8 @@ export default function Section() {
         <Routes>
           <Route path="/" element={<Menu />}>
             <Route index element={<HomeSection />} />
-            <Route path="alert" element={<ImportantSection makeItBlack={makeItBlack} />} />
             <Route path="graphic" element={<RulesSection makeItBlack={makeItBlack} />} />
+            <Route path="alert" element={<ImportantSection makeItBlack={makeItBlack} />} />
             <Route path="packets" element={<PacketsSection makeItBlack={makeItBlack} />} />
             <Route path="settings" element={<SettingsSection />} />
           </Route>
