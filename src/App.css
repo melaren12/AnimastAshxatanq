@@ -20,6 +20,11 @@ header {
   background-color: var(--header);
 }
 
+.but {
+  background-color: var(----background-color);
+  color: var( --table-text-color);
+}
+
 .dark-light {
   width: 30px;
   height: 20px;
@@ -43,7 +48,7 @@ header {
 }
 
 .white.dark {
- transform: translateX(9px);
+  transform: translateX(9px);
 }
 
 .home-section {
@@ -202,6 +207,10 @@ header {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+
+.gjvcrec:hover {
+  background-color: #4d4d4d;
 }
 
 .info {

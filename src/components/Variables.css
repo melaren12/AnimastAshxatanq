@@ -5,15 +5,24 @@ body {
   --button-background-color-hover: #fbad2f;
   --second-color: #e5e5e5;
   --button-text-color: #14213d;
-
+  --table-hover-color: #fafafa;
   --header-height: 50px;
+  --table-header-color: black;
+  --table-text-color: rgba(0, 0, 0, 0.88);
+  --select-bg-color: rgb(240, 239, 239);
+  --active-bg: white;
 }
 
 body.dark {
-  --background-color: #504f4f;
+  --background-color: #303030;
   --text-color: #fdfbfb;
   --button-background-color: #fca311;
   --button-background-color-hover: #fbad2f;
   --second-color: #161616;
   --button-text-color: #14213d;
+  --table-hover-color: #646464;
+  --table-header-color: #fdfbfb;
+  --table-text-color: #fdfbfb;
+  --select-bg-color: rgb(122, 122, 122);
+  --active-bg: rgb(180, 180, 180);
 }

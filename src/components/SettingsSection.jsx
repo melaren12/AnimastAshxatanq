@@ -1,6 +1,6 @@
-import { Table } from 'antd';
+import { Table, ConfigProvider } from 'antd';
 import { Button } from 'antd';
-import popup from '/popup.svg'
+import { ExportOutlined } from "@ant-design/icons";
 
 export default function SettingsSection() {
   const ourData = [{
@@ -60,13 +60,40 @@ export default function SettingsSection() {
 
   return (
     <section className='info'>
-      <Button type="default" size='default' style={{ margin: '10px 30px' }} className='gjvcrec' onClick={handleClick}>
-        <span> Open Admin Panel</span>
+      <ConfigProvider
+        theme={{
+          components: {
+            Button: {
+              defaultHoverBg: 'var(--table-hover-color)',
+              defaultHoverBorderColor: 'var(--table-text-color)',
+              defaultHoverColor: 'var(--table-text-color)'
+            }
+          }
+        }}
+      >
+        <Button type="default" size='default' style={{ margin: '10px 30px' }} className='gjvcrec but' onClick={handleClick}>
+          <span> Open Admin Panel</span>
+          <ExportOutlined />
+        </Button>
+      </ConfigProvider>
 
-        <img src={popup} alt="popup" style={{ width: '60%', height: '60%' }} />
-      </Button>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorBgContainer: 'var(--background-color)',
+            colorText: 'var(--table-text-color)'
+          },
+          components: {
+            Table: {
+              rowHoverBg: 'var(--table-hover-color)',
+              rowSelectedBg: 'black',
+              headerBg: 'var(--background-color)',
+              headerColor: 'var(--table-header-color)',
+            }
+          }
+        }}
+      >
         <Table
-          // style={{ width: '100%' }}
           columns={columns}
           dataSource={finalData}
           scroll={scroll}
@@ -75,6 +102,7 @@ export default function SettingsSection() {
           className="routertable"
           size="small"
         />
+      </ConfigProvider>
     </section>
 
   )
