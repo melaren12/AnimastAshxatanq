@@ -250,7 +250,8 @@ export default function TableWithCheckboxes({ tableData }) {
         theme={{
           token: {
             colorBgContainer: 'var(--background-color)',
-            colorText: 'var(--table-text-color)'
+            colorText: 'var(--table-text-color)',
+            colorPrimary: 'var(--color-primary)'
           },
           components: {
             Table: {
@@ -258,6 +259,8 @@ export default function TableWithCheckboxes({ tableData }) {
               rowSelectedBg: 'black',
               headerBg: 'var(--background-color)',
               headerColor: 'var(--table-header-color)',
+              rowSelectedHoverBg: 'var(--row-selected-hover)',
+              rowSelectedBg: 'var(--row-selected)'
             }
           }
         }}

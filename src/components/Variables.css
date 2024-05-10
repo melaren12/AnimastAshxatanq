@@ -11,6 +11,10 @@ body {
   --table-text-color: rgba(0, 0, 0, 0.88);
   --select-bg-color: rgb(240, 239, 239);
   --active-bg: white;
+  --border-color: #464444;
+  --row-selected-hover: #bae0ff;
+  --row-selected: #e6f4ff;
+  --color-primary: #1677ff;
 }
 
 body.dark {
@@ -25,4 +29,8 @@ body.dark {
   --table-text-color: #fdfbfb;
   --select-bg-color: rgb(122, 122, 122);
   --active-bg: rgb(180, 180, 180);
+  --border-color: #818181;
+  --row-selected-hover: #1f1e1e;
+  --row-selected: #5d5d5e;
+  --color-primary: #8f8e8e;
 }

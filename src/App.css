@@ -147,8 +147,8 @@ header {
   margin-bottom: 10px;
   flex: 1;
   /* border-radius: 10px; */
-  border-inline-start: 1px solid #f0f0f0;
-  background-color: rgb(243, 242, 242);
+  border-inline-start: 1px solid var(--border-color);
+  background-color: var(--second-color);
   display: none;
   position: relative;
 }
