@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 #root {
@@ -17,12 +18,15 @@ header {
   height: var(--header-height);
   padding: 5px 20px;
   align-items: center;
-  background-color: var(--header);
+  border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+  color: var(--text-color);
+  font-size: 22px;
+  /* background-color: var(--header); */
 }
 
 .but {
-  background-color: var(----background-color);
-  color: var( --table-text-color);
+  /* background-color: var(--background-color); */
+  /* color: var(--color-primary); */
 }
 
 .dark-light {
@@ -84,7 +88,7 @@ header {
 
 .karmir {
   width: 400px;
-  background-color: white;
+  background-color: var(--second-color);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -214,5 +218,5 @@ header {
 }
 
 .info {
-  width: calc(100% - 200px);
+  width: calc(100% - 240px);
 }

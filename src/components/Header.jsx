@@ -1,3 +1,4 @@
+import { WifiOutlined } from "@ant-design/icons"
 import { useState } from "react"
 
 export default function Header() {
@@ -10,7 +11,10 @@ export default function Header() {
   return (
     <>
       <header>
-        <p>Wi-Fi Monitoring App</p>
+        <div style={{display: 'flex', gap: '10px'}}>
+          <WifiOutlined style={{fontSize: '30px', color: '#1677ff'}}/>
+          <p>Wi-Fi Monitoring App</p>
+        </div>
         <button className="dark-light" onClick={myFunction}>
           <div className={
             'white ' + (mode ? 'dark' : '')

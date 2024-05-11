@@ -1,12 +1,12 @@
 body {
   --background-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #000000E0;
   --button-background-color: #fca311;
   --button-background-color-hover: #fbad2f;
   --second-color: #e5e5e5;
   --button-text-color: #14213d;
   --table-hover-color: #fafafa;
-  --header-height: 50px;
+  --header-height: 60px;
   --table-header-color: black;
   --table-text-color: rgba(0, 0, 0, 0.88);
   --select-bg-color: rgb(240, 239, 239);
@@ -15,6 +15,13 @@ body {
   --row-selected-hover: #bae0ff;
   --row-selected: #e6f4ff;
   --color-primary: #1677ff;
+  /* --body-background: rgb(241, 243, 245); */
+  --body-background: white;
+
+  background: var(--body-background);
+  /* background-color: #e4e4e4;
+  background: no-repeat center url("back2.jpg");
+  background-size: cover; */
 }
 
 body.dark {
@@ -22,7 +29,7 @@ body.dark {
   --text-color: #fdfbfb;
   --button-background-color: #fca311;
   --button-background-color-hover: #fbad2f;
-  --second-color: #161616;
+  --second-color: #3a3a3a;
   --button-text-color: #14213d;
   --table-hover-color: #646464;
   --table-header-color: #fdfbfb;
@@ -33,4 +40,6 @@ body.dark {
   --row-selected-hover: #1f1e1e;
   --row-selected: #5d5d5e;
   --color-primary: #8f8e8e;
+  --body-background: #1E1F22;
+
 }

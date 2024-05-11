@@ -12,45 +12,20 @@ export default function Menu() {
   return (
     <>
       <section className="navbar">
-        <NavLink to="/" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
-          <Button
-            isActive={contentType === 'home'}
-            onClick={() => handleClick('home')}
-          >
-            <p>Home</p>
-          </Button>
+        <NavLink to="/" className={({ isActive }) => "link " + (isActive ? "active" : "")} >
+          Home
         </NavLink>
         <NavLink to="/packets" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
-          <Button
-            isActive={contentType === 'packets'}
-            onClick={() => handleClick('packets')}
-          >
-            <p>Packets</p>
-          </Button>
+          Packets
         </NavLink>
         <NavLink to="/graphic" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
-          <Button
-            isActive={contentType === 'graphic'}
-            onClick={() => handleClick('graphic')}
-          >
-            <p>Rules</p>
-          </Button>
+          Rules
         </NavLink>
         <NavLink to="/alert" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
-          <Button
-            isActive={contentType === 'alert'}
-            onClick={() => handleClick('alert')}
-          >
-            <p>Important packets</p>
-          </Button>
+          Important packets
         </NavLink>
         <NavLink to="/settings" className={({ isActive }) => "link " + (isActive ? "active" : "")}>
-          <Button
-            isActive={contentType === 'settings'}
-            onClick={() => handleClick('settings')}
-          >
-            <p>Router information</p>
-          </Button>
+          Router information
         </NavLink>
       </section>
       <Outlet />

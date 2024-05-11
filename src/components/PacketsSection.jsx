@@ -65,15 +65,18 @@ export default function PacketsSection(props) {
           }}
         >
           <>
-            <div className="left-toolbar">
-              <Button type="default" size='default' style={{ margin: '0 5px 0 0' }} className="but">
-                <PlayCircleOutlined style={{ fontSize: '20px' }} />
+            <div className="left-toolbar" style={{display: 'flex'}}>
+              <Button type="primary" size='large' style={{ margin: '0 5px 0 0', display: 'flex', alignItems: 'center' }} className="but">
+                <PlayCircleOutlined style={{ fontSize: '18px' }} />
+                Start
               </Button>
-              <Button type="default" size='default' style={{ margin: '0 5px' }} className="but">
-                <PauseCircleOutlined style={{ fontSize: '20px' }} />
+              <Button type="default" size='large' style={{ margin: '0 5px', display: 'flex', alignItems: 'center' }} className="but">
+                <PauseCircleOutlined style={{ fontSize: '18px' }} />
+                Stop
               </Button>
-              <Button type="default" size='default' style={{ margin: '0 5px' }} className="but">
-                <DownloadOutlined style={{ fontSize: '20px' }} />
+              <Button type="default" size='large' style={{ margin: '0 5px', display: 'flex', alignItems: 'center' }} className="but">
+                <DownloadOutlined style={{ fontSize: '18px' }} />
+                Download
               </Button>
             </div>
             <Button type="default" size='default' onClick={opened} style={{ margin: '0' }} className="but">

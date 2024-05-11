@@ -1,20 +1,24 @@
+
+
 .glx {
   display: flex;
-  background-color: var(--background-color);
   color: var(--text-color);
   height: calc(100vh - 60px);
 }
 
 .navbar {
   height: calc(100vh - 60px);
-  width: 200px;
-  background-color: var(--second-color);
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-
+/* 
 .navbar p {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 300;
   color: var(--text-color);
-}
+} */
 
 .main-section {
   height: calc(100vh - 60px);
@@ -33,17 +37,26 @@
   text-decoration: none;
   display: block;
   width: 100%;
-  text-align: center;
-  background-color: var(--second-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--text-color);
+  /* background-color: var(--second-color); */
 }
 
 .link button {
   color: black;
 }
 
+.link:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
 .link.active {
-  background-color: var(--background-color);
-  color: black;
+  background-color: #d7e9f7;
+  color: #1677ff;
 }
 
 .packets-section {

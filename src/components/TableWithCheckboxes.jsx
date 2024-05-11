@@ -251,7 +251,7 @@ export default function TableWithCheckboxes({ tableData }) {
           token: {
             colorBgContainer: 'var(--background-color)',
             colorText: 'var(--table-text-color)',
-            colorPrimary: 'var(--color-primary)'
+            // colorPrimary: '#fca311'
           },
           components: {
             Table: {
