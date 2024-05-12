@@ -1,5 +1,3 @@
-
-
 .glx {
   display: flex;
   color: var(--text-color);
@@ -7,6 +5,7 @@
 }
 
 .navbar {
+  padding: 10px 0;
   height: calc(100vh - 60px);
   width: 240px;
   display: flex;
@@ -37,26 +36,22 @@
   text-decoration: none;
   display: block;
   width: 100%;
-  padding: 10px 20px;
+  padding: 14px 20px;
   border-radius: 5px;
   margin-left: 5px;
   font-size: 20px;
   font-weight: 300;
-  color: var(--text-color);
-  /* background-color: var(--second-color); */
-}
-
-.link button {
-  color: black;
+  color: var(--link-color);
 }
 
 .link:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: var(--link-hover-background);
+  color: var(--link-hover-color);
 }
 
 .link.active {
-  background-color: #d7e9f7;
-  color: #1677ff;
+  background-color: var(--link-active-background);
+  color: var(--link-active-color);
 }
 
 .packets-section {

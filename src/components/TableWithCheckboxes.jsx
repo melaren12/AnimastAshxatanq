@@ -17,7 +17,7 @@ export default function TableWithCheckboxes({ tableData }) {
   if (yScroll) {
     scroll.y = 180;
   } else {
-    scroll.y = 400;
+    scroll.y = 600;
   }
 
   const prostoData = tableData.map((obj) => {
@@ -260,7 +260,8 @@ export default function TableWithCheckboxes({ tableData }) {
               headerBg: 'var(--background-color)',
               headerColor: 'var(--table-header-color)',
               rowSelectedHoverBg: 'var(--row-selected-hover)',
-              rowSelectedBg: 'var(--row-selected)'
+              rowSelectedBg: 'var(--row-selected)',
+              cellFontSizeMD: '16px'
             }
           }
         }}
@@ -280,7 +281,7 @@ export default function TableWithCheckboxes({ tableData }) {
           pagination={false}
           bordered
           className="table"
-          size="small"
+          size="middle"
         />
       </ConfigProvider>
 

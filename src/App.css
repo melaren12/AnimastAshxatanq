@@ -6,11 +6,14 @@
   box-sizing: border-box;
 }
 
-#root {
+main {
+  background-color: var(--background-color);
+}
+
+/* #root {
   max-width: 100%;
   margin: 0 auto;
-  /* text-align: center; */
-}
+} */
 
 header {
   display: flex;
@@ -18,15 +21,9 @@ header {
   height: var(--header-height);
   padding: 5px 20px;
   align-items: center;
-  border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+  border-bottom: 1px solid var(--header-border-color);
   color: var(--text-color);
   font-size: 22px;
-  /* background-color: var(--header); */
-}
-
-.but {
-  /* background-color: var(--background-color); */
-  /* color: var(--color-primary); */
 }
 
 .dark-light {

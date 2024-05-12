@@ -11,9 +11,9 @@ export default function Header() {
   return (
     <>
       <header>
-        <div style={{display: 'flex', gap: '10px'}}>
+        <div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
           <WifiOutlined style={{fontSize: '30px', color: '#1677ff'}}/>
-          <p>Wi-Fi Monitoring App</p>
+          <span>Wi-Fi Monitoring App</span>
         </div>
         <button className="dark-light" onClick={myFunction}>
           <div className={
