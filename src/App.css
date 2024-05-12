@@ -53,8 +53,8 @@ header {
 }
 
 .home-section {
-  width: calc(100% - 200px);
-  text-align: center;
+  padding: 10px 20px;
+  /* text-align: center; */
 }
 
 .home-section h3 {

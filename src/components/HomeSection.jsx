@@ -17,7 +17,9 @@ export default function HomeSection() {
     }
     ]
   return (
-    <div className="home-section">
+    <div className="home-section main-section">
+      <h1>Welcome</h1>
+      <p>Introducing Wi-Fi Monitoring App - the simple and user-friendly WiFi monitoring app. Stay informed about your network's status effortlessly. Easy-to-use interface, no technical expertise required. Monitor your WiFi network with ease.</p>
       <h3 style={{ position: 'relative', bottom: '30px' }}>Choose Your Access Point </h3>
       <div className="select">
         <ConfigProvider
