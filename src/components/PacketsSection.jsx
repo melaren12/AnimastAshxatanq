@@ -57,16 +57,18 @@ export default function PacketsSection(props) {
           theme={{
             components: {
               Button: {
-                defaultHoverBg: 'var(--table-hover-color)',
-                defaultHoverBorderColor: 'var(--table-text-color)',
-                defaultHoverColor: 'var(--table-text-color)'
+                defaultHoverBg: 'var(--button-hover-color)',
+                defaultHoverBorderColor: 'var(--but-hover-border)',
+                defaultHoverColor: 'var(--but-hover-text)',
+                defaultBg: 'var(--but-bg-color)',
+                defaultColor: 'var(--but-text-color)'
               }
             }
           }}
         >
           <>
-            <div className="left-toolbar" style={{display: 'flex'}}>
-              <Button type="primary" size='large' style={{ margin: '0 5px 0 0', display: 'flex', alignItems: 'center' }} className="but">
+            <div className="left-toolbar" style={{ display: 'flex' }}>
+              <Button type="default" size='large' style={{ margin: '0 5px 0 0', display: 'flex', alignItems: 'center' }} className="but">
                 <PlayCircleOutlined style={{ fontSize: '18px' }} />
                 Start
               </Button>
@@ -79,8 +81,9 @@ export default function PacketsSection(props) {
                 Download
               </Button>
             </div>
-            <Button type="default" size='default' onClick={opened} style={{ margin: '0' }} className="but">
-              <FontAwesomeIcon icon="fa-solid fa-filter" style={{ fontSize: '20px' }} />
+            <Button type="default" size='large' onClick={opened} style={{ margin: '0', display: 'flex', alignItems: 'center' }} className="but">
+              <FontAwesomeIcon icon="fa-solid fa-filter" style={{ fontSize: '18px', marginRight: '5px' }} />
+              Filter
             </Button>
           </>
 

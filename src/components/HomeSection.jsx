@@ -1,11 +1,11 @@
-import { Select, Input, ConfigProvider } from 'antd';
-import { useState } from 'react';
+import { Select, Button, ConfigProvider } from 'antd';
+// import Button from 'antd';
 
 export default function HomeSection() {
-  const [show, setShow] = useState(false)
-  const handleClick = () => {
-    setShow(true)
-  }
+  // const [show, setShow] = useState(false)
+  // const handleClick = () => {
+  //   setShow(true)
+  // }
   const tableData =
     [{
       value: 'jack',
@@ -18,9 +18,9 @@ export default function HomeSection() {
     ]
   return (
     <div className="home-section main-section">
-      <h1>Welcome</h1>
-      <p>Introducing Wi-Fi Monitoring App - the simple and user-friendly WiFi monitoring app. Stay informed about your network's status effortlessly. Easy-to-use interface, no technical expertise required. Monitor your WiFi network with ease.</p>
-      <h3 style={{ position: 'relative', bottom: '30px' }}>Choose Your Access Point </h3>
+      <h1>Welcome to Wi-Fi Monitoring App</h1>
+      <p style={{ margin: '20px 0', lineHeight: '25px' }}>The simple and user-friendly WiFi monitoring app. Stay informed about your network's status effortlessly. Easy-to-use interface, no technical expertise required. Monitor your WiFi network with ease.</p>
+      <p style={{margin: '50px 0 10px', fontWeight: '600'}}>To start capturing packets first select the network interface</p>
       <div className="select">
         <ConfigProvider
           theme={{
@@ -29,6 +29,13 @@ export default function HomeSection() {
                 selectorBg: 'var(--select-bg-color)',
                 optionActiveBg: 'var(--active-bg)',
                 optionSelectedBg: 'var(--select-bg-color)',
+              },
+              Button: {
+                defaultHoverBg: 'var(--button-hover-color)',
+                defaultHoverBorderColor: 'var(--but-hover-border)',
+                defaultHoverColor: 'var(--but-hover-text)',
+                defaultBg: 'var(--but-bg-color)',
+                defaultColor: 'var(--but-text-color)'
               }
             },
             token: {
@@ -42,6 +49,7 @@ export default function HomeSection() {
           <Select
             labelInValue
             defaultValue={'Select'}
+            size='large'
             // defaultValue={{
             //   value: 'Wi-Fi',
             //   label: 'Wi-Fi',
@@ -52,9 +60,10 @@ export default function HomeSection() {
             }}
 
             options={tableData}
-            onChange={handleClick}
           />
-          <Input.Password placeholder="input password" style={{ width: '200px' }} className={'input ' + (show ? 'show' : '')} />
+          <Button type="primary" size='large' style={{ margin: '0 5px 0 0', display: 'flex', alignItems: 'center' }} className="but">
+            Start Capturing Packets
+          </Button>
         </ConfigProvider>
       </div>
     </div>

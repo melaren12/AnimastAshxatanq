@@ -64,15 +64,17 @@ export default function SettingsSection() {
         theme={{
           components: {
             Button: {
-              defaultHoverBg: 'var(--table-hover-color)',
-              defaultHoverBorderColor: 'var(--table-text-color)',
-              defaultHoverColor: 'var(--table-text-color)'
+              defaultHoverBg: 'var(--button-hover-color)',
+                defaultHoverBorderColor: 'var(--but-hover-border)',
+                defaultHoverColor: 'var(--but-hover-text)',
+                defaultBg: 'var(--but-bg-color)',
+                defaultColor: 'var(--but-text-color)'
             }
           }
         }}
       >
-        <Button type="default" size='default' style={{ margin: '10px 30px' }} className='gjvcrec but' onClick={handleClick}>
-          <span> Open Admin Panel</span>
+        <Button type="default" size='large' style={{ margin: '10px 20px' }} className='gjvcrec but' onClick={handleClick}>
+          Open Admin Panel
           <ExportOutlined />
         </Button>
       </ConfigProvider>
@@ -89,6 +91,7 @@ export default function SettingsSection() {
               rowSelectedBg: 'black',
               headerBg: 'var(--background-color)',
               headerColor: 'var(--table-header-color)',
+              cellFontSizeMD: '16px'
             }
           }
         }}
@@ -100,7 +103,7 @@ export default function SettingsSection() {
           pagination={false}
           bordered
           className="routertable"
-          size="small"
+          size="middle"
         />
       </ConfigProvider>
     </section>

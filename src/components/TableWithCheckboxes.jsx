@@ -1,7 +1,7 @@
 import React from "react";
 import { Space, Table, ConfigProvider } from 'antd';
 import { useState } from "react";
-import { CloseOutlined, PlusOutlined, EyeOutlined } from "@ant-design/icons";
+import { CloseOutlined, StarFilled } from "@ant-design/icons";
 
 export default function TableWithCheckboxes({ tableData }) {
   const [about, setAbout] = useState(false)
@@ -17,7 +17,7 @@ export default function TableWithCheckboxes({ tableData }) {
   if (yScroll) {
     scroll.y = 180;
   } else {
-    scroll.y = 600;
+    scroll.y = 400;
   }
 
   const prostoData = tableData.map((obj) => {
@@ -230,17 +230,20 @@ export default function TableWithCheckboxes({ tableData }) {
     title: 'Lenght',
     width: 'auto',
     dataIndex: 'length',
-  }, {
-    title: 'Action',
-    width: 'auto',
-    dataIndex: 'id',
-    render: (id) => (
-      <Space size={'middle'} style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <EyeOutlined onClick={handleClick} style={{ cursor: 'pointer' }}/>
-        <PlusOutlined style={{ fontSize: '20px', cursor: 'pointer' }} />
-      </Space>)
+  },
+    //  {
+    //   title: 'Action',
+    //   width: 'auto',
+    //   dataIndex: 'id',
+    //   render: () => (
+    //     <Space size={'middle'}>
+    //       {/* <EyeOutlined onClick={handleClick} style={{ cursor: 'pointer' }}/> */}
+    //       {/* <p style={{fontSize: '12px'}}>Add To Important Packets</p> */}
+    //       <StarFilled style={{ fontSize: '18px', cursor: 'pointer' }} />
+    //     </Space>)
 
-  }]
+    // }
+  ]
 
 
   return (
@@ -251,6 +254,7 @@ export default function TableWithCheckboxes({ tableData }) {
           token: {
             colorBgContainer: 'var(--background-color)',
             colorText: 'var(--table-text-color)',
+            motionDurationMid: '0'
             // colorPrimary: '#fca311'
           },
           components: {
@@ -261,7 +265,8 @@ export default function TableWithCheckboxes({ tableData }) {
               headerColor: 'var(--table-header-color)',
               rowSelectedHoverBg: 'var(--row-selected-hover)',
               rowSelectedBg: 'var(--row-selected)',
-              cellFontSizeMD: '16px'
+              cellFontSizeMD: '16px',
+              borderColor: 'var(--table-border-color)'
             }
           }
         }}

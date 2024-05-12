@@ -1,5 +1,5 @@
 import useInput from "../useInput";
-import { Button } from 'antd';
+import { Button, ConfigProvider, Input  } from 'antd';
 
 export default function Pordz({ bacvac, lav, bac }) {
   const name = useInput()
@@ -18,18 +18,36 @@ export default function Pordz({ bacvac, lav, bac }) {
     <div className={
       'karmir ' + (bacvac ? 'bacvac' : '')
     }>
-      <input type="text" className="control" placeholder="Id" {...id} />
-      <input type="text" className="control" placeholder="Protocol" {...name} />
-      <input type="text" className="control" placeholder="Source" {...name} />
-      <input type="text" className="control" placeholder="Destination" {...name} />
-      <input type="text" className="control" placeholder="Lenghth" {...name} />
+      <Input size="large" className="control" placeholder="Id"  />
+      <Input size="large" className="control" placeholder="Protocol"  />
+      <Input size="large" className="control" placeholder="Source"  />
+      <Input size="large" className="control" placeholder="Destination"  />
+      <Input size="large" className="control" placeholder="Length"  />
       <div className="buttons">
-        <Button type="default" size='default' onClick={handleClose}>
-          Close
-        </Button>
-        <Button type="default" size='default' onClick={handleConfirm}>
-          Confirm
-        </Button>
+        <ConfigProvider
+          theme={{
+            components: {
+              Button: {
+                defaultHoverBg: 'var(--button-hover-color)',
+                defaultHoverBorderColor: 'var(--but-hover-border)',
+                defaultHoverColor: 'var(--but-hover-text)',
+                defaultBg: 'var(--but-bg-color)',
+                defaultColor: 'var(--but-text-color)'
+              }
+            }
+          }}
+        >
+          <>
+            <Button type="default" size='large' onClick={handleClose}>
+              Close
+            </Button>
+            <Button type="default" size='large' onClick={handleConfirm}>
+              Confirm
+            </Button>
+          </>
+
+        </ConfigProvider>
+
       </div>
     </div>
   )

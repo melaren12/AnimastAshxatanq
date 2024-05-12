@@ -4,6 +4,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background: rgb(54, 53, 53) !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-bottom-right-radius: .2rem !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(201, 193, 193) !important;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-bg) var(--scrollbar-bg);
 }
 
 main {
@@ -62,7 +82,7 @@ header {
 }
 
 .table-parent {
-  margin: 0 30px;
+  margin: 0 20px;
   height: 100%;
   /* height: calc(100vh - 102px); */
   display: flex;
@@ -73,19 +93,23 @@ header {
   align-content: stretch;
 }
 
+.ant-table-container {
+  border-inline-end: 1px solid var(--table-border-color);
+}
+
 .table {
   flex: 1;
 }
 
 .toolbar {
-  margin: 10px 30px;
+  margin: 10px 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .karmir {
   width: 400px;
-  background-color: var(--second-color);
+  background-color: var(--body-background);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -93,6 +117,7 @@ header {
   transform: translateX(400px);
   transition: transform 0.2s linear;
   z-index: 130;
+  padding: 30px;
 }
 
 .karmir.bacvac {
@@ -100,32 +125,17 @@ header {
 }
 
 .control {
-  border: 1px solid #ccc;
-  background: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  width: 300px;
-  margin: 15px;
   margin-bottom: 1rem;
 }
 
-.control:hover {
-  background-color: rgb(221, 220, 220);
-}
-
 .buttons {
-  margin: 30px;
+  margin: 30px 0;
   position: absolute;
   bottom: 0;
   width: 340px;
   display: flex;
   justify-content: space-between;
 
-}
-
-.buttons button {
-  background-color: rgb(160, 154, 154);
-  color: var(--button-text-color);
 }
 
 
@@ -179,9 +189,7 @@ header {
 
 .select {
   display: flex;
-  flex-direction: column;
   text-align: center;
-  align-items: center;
   gap: 20px;
 }
 
@@ -200,7 +208,7 @@ header {
 }
 
 .routertable {
-  padding: 0 30px;
+  padding: 0 20px;
   width: 100%;
 }
 

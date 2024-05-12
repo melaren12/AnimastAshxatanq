@@ -6,24 +6,31 @@ body {
   --second-color: #e5e5e5;
   --button-text-color: #14213d;
   --table-hover-color: #fafafa;
+  --but-bg-color: #ffffff;
+  --button-hover-color: #fafafa;
+  --but-text-color: rgba(0, 0, 0, 0.88);
+  --but-hover-border: rgba(0, 0, 0, 0.88);
+  --but-hover-color:rgba(0, 0, 0, 0.88);
+  --but-hover-text: rgba(0, 0, 0, 0.88);
   --header-height: 60px;
   --table-header-color: black;
   --table-text-color: rgba(0, 0, 0, 0.88);
-  --select-bg-color: rgb(240, 239, 239);
+  --select-bg-color: #ffffff;
   --active-bg: white;
   --border-color: #464444;
   --row-selected-hover: #bae0ff;
   --row-selected: #e6f4ff;
   --color-primary: #1677ff;
   --body-background: white;
-
+  --scrollbar-bg: rgb(255, 255, 255);
+  --scroll-bg: #8A8A8A;
   --header-border-color: rgba(5, 5, 5, 0.06);
-
   --link-color: #1E1E1E;
   --link-active-color: #1677ff;
   --link-active-background: #E6F4FF;
   --link-hover-background: rgba(0, 0, 0, 0.06);
   --link-hover-color: var(--link-color);
+  --table-border-color: #f0f0f0;
 }
 
 body.dark {
@@ -33,22 +40,29 @@ body.dark {
   --button-background-color-hover: #fbad2f;
   --second-color: #3a3a3a;
   --button-text-color: #14213d;
-  --table-hover-color: #646464;
+  --table-hover-color: #00080f;
   --table-header-color: #fdfbfb;
   --table-text-color: #fdfbfb;
+  --but-bg-color: #000C17;
+  --button-hover-color: #000C17;
+  --but-hover-text: #fff;
+  --but-hover-border: rgb(0, 0, 0);
+  --but-text-color: #dad7d7;
+  --but-hover-color:rgba(133, 133, 133, 0.88);
   --select-bg-color: rgb(122, 122, 122); 
   --active-bg: rgb(180, 180, 180);
   --border-color: #818181;
-  --row-selected-hover: #1f1e1e;
-  --row-selected: #5d5d5e;
+  --row-selected-hover: #00080f;
+  --row-selected: #000C17;
   --color-primary: #8f8e8e;
   --body-background: #1E1F22;
-
   --header-border-color: rgba(255, 255, 255, 0.25);
-
   --link-color: #A6AAAE;
   --link-active-color: #FBFDFF;
   --link-active-background: #1677FF;
   --link-hover-background: transparent;
   --link-hover-color: #fff;
+  --scrollbar-bg: #000C17;
+  --scroll-bg: #9F9F9F;
+  --table-border-color: #8f8f8f;
 }

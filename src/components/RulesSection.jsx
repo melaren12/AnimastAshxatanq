@@ -76,19 +76,23 @@ export default function Rules() {
           theme={{
             components: {
               Button: {
-                defaultHoverBg: 'var(--table-hover-color)',
-                defaultHoverBorderColor: 'var(--table-text-color)',
-                defaultHoverColor: 'var(--table-text-color)'
+                defaultHoverBg: 'var(--button-hover-color)',
+                defaultHoverBorderColor: 'var(--but-hover-border)',
+                defaultHoverColor: 'var(--but-hover-text)',
+                defaultBg: 'var(--but-bg-color)',
+                defaultColor: 'var(--but-text-color)'
               }
             }
           }}
         >
           <div className="left-toolbar">
-            <Button type="default" size='default' style={{ margin: '0 5px' }} className="but">
-              <PlusOutlined style={{ fontSize: '20px' }} />
+            <Button type="default" size='large' style={{ margin: '0 5px 0 0' }} className="but">
+              <PlusOutlined style={{ fontSize: '18px' }} />
+              Add
             </Button>
-            <Button type="default" size='default' style={{ margin: '0 5px' }} className="but">
-              <DeleteOutlined style={{ fontSize: '20px' }} />
+            <Button type="default" size='large' style={{ margin: '0 5px' }} className="but">
+              <DeleteOutlined style={{ fontSize: '18px' }} />
+              Delete
             </Button>
           </div>
         </ConfigProvider>
@@ -111,6 +115,7 @@ export default function Rules() {
                 rowSelectedBg: 'black',
                 headerBg: 'var(--background-color)',
                 headerColor: 'var(--table-header-color)',
+                cellFontSizeMD: '16px'
               }
             }
           }}
@@ -118,7 +123,7 @@ export default function Rules() {
           <Table
             columns={columns}
             dataSource={finalData}
-            style={{ margin: '0 30px' }}
+            style={{ margin: '0 20px' }}
             rowSelection={{
               type: 'checkbox',
               columnWidth: '32px',
@@ -127,7 +132,7 @@ export default function Rules() {
             pagination={false}
             bordered
             className="table"
-            size="small"
+            size="middle"
           />
         </ConfigProvider>
       </div>

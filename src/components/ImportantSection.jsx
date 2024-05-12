@@ -58,23 +58,28 @@ export default function ImportantSection(props) {
           theme={{
             components: {
               Button: {
-                defaultHoverBg: 'var(--table-hover-color)',
-                defaultHoverBorderColor: 'var(--table-text-color)',
-                defaultHoverColor: 'var(--table-text-color)'
+                defaultHoverBg: 'var(--button-hover-color)',
+                defaultHoverBorderColor: 'var(--but-hover-border)',
+                defaultHoverColor: 'var(--but-hover-text)',
+                defaultBg: 'var(--but-bg-color)',
+                defaultColor: 'var(--but-text-color)'
               }
             }
           }}
         >
           <div className="left-toolbar">
-            <Button type="default" size='default' style={{ margin: '0 5px' }} className="but">
-              <DownloadOutlined style={{ fontSize: '20px' }} />
+            <Button type="default" size='large' style={{ margin: '0 5px 0 0' }} className="but">
+              <DownloadOutlined style={{ fontSize: '18px' }} />
+              Download
             </Button>
-            <Button type="default" size='default' style={{ margin: '0 5px' }} className="but">
-              <DeleteOutlined style={{ fontSize: '20px' }} />
+            <Button type="default" size='large' style={{ margin: '0 5px' }} className="but">
+              <DeleteOutlined style={{ fontSize: '18px' }} />
+              Delete
             </Button>
           </div>
-          <Button type="default" size='default' onClick={opened} style={{ margin: '0' }} className="but">
-            <FontAwesomeIcon icon="fa-solid fa-filter" style={{ fontSize: '20px' }} />
+          <Button type="default" size='large' onClick={opened} style={{ margin: '0' }} className="but">
+            <FontAwesomeIcon icon="fa-solid fa-filter" style={{ fontSize: '18px', marginRight: '5px' }} />
+            Filter
           </Button>
           </ ConfigProvider >
 
