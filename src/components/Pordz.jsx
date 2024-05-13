@@ -1,5 +1,5 @@
 import useInput from "../useInput";
-import { Button, ConfigProvider, Input  } from 'antd';
+import { Button, ConfigProvider, Input } from 'antd';
 
 export default function Pordz({ bacvac, lav, bac }) {
   const name = useInput()
@@ -18,11 +18,17 @@ export default function Pordz({ bacvac, lav, bac }) {
     <div className={
       'karmir ' + (bacvac ? 'bacvac' : '')
     }>
-      <Input size="large" className="control" placeholder="Id"  />
-      <Input size="large" className="control" placeholder="Protocol"  />
-      <Input size="large" className="control" placeholder="Source"  />
-      <Input size="large" className="control" placeholder="Destination"  />
-      <Input size="large" className="control" placeholder="Length"  />
+      <Input size="large" className="control" placeholder="Id" />
+      <Input size="large" className="control" placeholder="Protocol" />
+      <div className="source" style={{ display: 'flex', gap: '5px' }}>
+        <Input size="large" className="control" placeholder="Source" style={{ flex: '3' }} />
+        <Input size="large" className="control" placeholder="Port" style={{ flex: '1' }} />
+      </div>
+      <div className="source" style={{ display: 'flex', gap: '5px' }}>
+        <Input size="large" className="control" placeholder="Destination" style={{ flex: '3' }} />
+        <Input size="large" className="control" placeholder="Port" style={{ flex: '1' }} />
+      </div>
+      <Input size="large" className="control" placeholder="Length" />
       <div className="buttons">
         <ConfigProvider
           theme={{

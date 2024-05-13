@@ -108,7 +108,7 @@ header {
 }
 
 .karmir {
-  width: 400px;
+  width: 450px;
   background-color: var(--body-background);
   position: absolute;
   top: 0;
@@ -132,7 +132,7 @@ header {
   margin: 30px 0;
   position: absolute;
   bottom: 0;
-  width: 340px;
+  width: 390px;
   display: flex;
   justify-content: space-between;
 
