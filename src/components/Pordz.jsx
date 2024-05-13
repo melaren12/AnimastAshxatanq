@@ -51,9 +51,7 @@ export default function Pordz({ bacvac, lav, bac }) {
               Confirm
             </Button>
           </>
-
         </ConfigProvider>
-
       </div>
     </div>
   )

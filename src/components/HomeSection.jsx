@@ -1,11 +1,6 @@
 import { Select, Button, ConfigProvider } from 'antd';
-// import Button from 'antd';
 
 export default function HomeSection() {
-  // const [show, setShow] = useState(false)
-  // const handleClick = () => {
-  //   setShow(true)
-  // }
   const tableData =
     [{
       value: 'jack',
@@ -50,15 +45,9 @@ export default function HomeSection() {
             labelInValue
             defaultValue={'Select'}
             size='large'
-            // defaultValue={{
-            //   value: 'Wi-Fi',
-            //   label: 'Wi-Fi',
-            // }}
-
             style={{
               width: 200,
             }}
-
             options={tableData}
           />
           <Button type="primary" size='large' style={{ margin: '0 5px 0 0', display: 'flex', alignItems: 'center' }} className="but">

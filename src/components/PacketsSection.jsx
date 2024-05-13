@@ -1,15 +1,12 @@
 import TableWithCheckboxes from "./TableWithCheckboxes"
 import Pordz from "./Pordz"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Button, ConfigProvider } from 'antd';
 import { PlayCircleOutlined, PauseCircleOutlined, DownloadOutlined } from "@ant-design/icons";
 
-const filtering = (filters, allData) => {
+const filtering = () => {
   let filteredData = []
-  // allData.forEach((user) => {
-  //   if( user.name.toLowerCase().includes(filters.name.toLowerCase()))
-  // })
   return filteredData
 }
 
@@ -17,7 +14,6 @@ const filtering = (filters, allData) => {
 export default function PacketsSection(props) {
   const [active, setActive] = useState(false)
   const [users, setUsers] = useState([])
-  const [filteredUsers, setFilteredUsers] = useState([])
   const [filters, setFilters] = useState({})
 
   useEffect(() => {

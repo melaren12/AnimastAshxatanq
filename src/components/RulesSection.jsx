@@ -3,11 +3,8 @@ import { Table, ConfigProvider } from 'antd';
 import { Button } from 'antd';
 import { DeleteOutlined, PlusOutlined } from "@ant-design/icons";
 
-const filtering = (filters, allData) => {
+const filtering = () => {
   let filteredData = []
-  // allData.forEach((user) => {
-  //   if( user.name.toLowerCase().includes(filters.name.toLowerCase()))
-  // })
   return filteredData
 }
 
@@ -96,11 +93,6 @@ export default function Rules() {
             </Button>
           </div>
         </ConfigProvider>
-
-        {/* <Button type="default" size='default' onClick={opened} style={{ margin: '0' }}>
-          <FontAwesomeIcon icon="fa-solid fa-filter" style={{ fontSize: '20px' }} />
-        </Button> */}
-
       </div>
       <div className="packets-container">
         <ConfigProvider

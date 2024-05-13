@@ -54,7 +54,7 @@ export default function SettingsSection() {
 
   const handleClick = () => {
     window.open(
-      'http://tplinkmodem.net/' // <- This is what makes it open in a new window.
+      'http://tplinkmodem.net/'
     )
   }
 
@@ -65,10 +65,10 @@ export default function SettingsSection() {
           components: {
             Button: {
               defaultHoverBg: 'var(--button-hover-color)',
-                defaultHoverBorderColor: 'var(--but-hover-border)',
-                defaultHoverColor: 'var(--but-hover-text)',
-                defaultBg: 'var(--but-bg-color)',
-                defaultColor: 'var(--but-text-color)'
+              defaultHoverBorderColor: 'var(--but-hover-border)',
+              defaultHoverColor: 'var(--but-hover-text)',
+              defaultBg: 'var(--but-bg-color)',
+              defaultColor: 'var(--but-text-color)'
             }
           }
         }}
@@ -78,7 +78,6 @@ export default function SettingsSection() {
           <ExportOutlined />
         </Button>
       </ConfigProvider>
-
       <ConfigProvider
         theme={{
           token: {

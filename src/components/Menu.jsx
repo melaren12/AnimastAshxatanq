@@ -1,7 +1,6 @@
 import './Main.css'
 import { NavLink, Outlet } from "react-router-dom";
 import { useState } from 'react'
-import Button from './Button/Button';
 
 export default function Menu() {
   const [contentType, setContentType] = useState(null)

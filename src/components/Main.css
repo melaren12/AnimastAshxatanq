@@ -12,12 +12,6 @@
   flex-direction: column;
   gap: 5px;
 }
-/* 
-.navbar p {
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--text-color);
-} */
 
 .main-section {
   height: calc(100vh - 60px);

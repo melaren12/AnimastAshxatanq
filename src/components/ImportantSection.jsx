@@ -5,20 +5,15 @@ import { useState, useEffect, useCallback } from "react";
 import { Button, ConfigProvider } from 'antd';
 import { DeleteOutlined, DownloadOutlined } from "@ant-design/icons";
 
-const filtering = (filters, allData) => {
+const filtering = () => {
   let filteredData = []
-  // allData.forEach((user) => {
-  //   if( user.name.toLowerCase().includes(filters.name.toLowerCase()))
-  // })
   return filteredData
 }
-
 
 
 export default function ImportantSection(props) {
   const [active, setActive] = useState(false)
   const [users, setUsers] = useState([])
-  const [filteredUsers, setFilteredUsers] = useState([])
   const [filters, setFilters] = useState({})
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Space, Table, ConfigProvider } from 'antd';
+import { Table, ConfigProvider, Space } from 'antd';
 import { useState } from "react";
 import { CloseOutlined, StarFilled } from "@ant-design/icons";
 
@@ -19,11 +19,6 @@ export default function TableWithCheckboxes({ tableData }) {
   } else {
     scroll.y = 400;
   }
-
-  const prostoData = tableData.map((obj) => {
-    obj.key = obj.id
-    return obj;
-  });
 
   const text = `Frame 2073: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{13D11F63-8151-4EE3-B815-E1B0AE93D01D}, id 0
   Ethernet II, Src: TPLink_0f:9e:b0 (50:91:e3:0f:9e:b0), Dst: CloudNetwork_9f:3f:8d (74:97:79:9f:3f:8d)
@@ -230,21 +225,16 @@ export default function TableWithCheckboxes({ tableData }) {
     title: 'Lenght',
     width: 'auto',
     dataIndex: 'length',
-  },
-    //  {
-    //   title: 'Action',
-    //   width: 'auto',
-    //   dataIndex: 'id',
-    //   render: () => (
-    //     <Space size={'middle'}>
-    //       {/* <EyeOutlined onClick={handleClick} style={{ cursor: 'pointer' }}/> */}
-    //       {/* <p style={{fontSize: '12px'}}>Add To Important Packets</p> */}
-    //       <StarFilled style={{ fontSize: '18px', cursor: 'pointer' }} />
-    //     </Space>)
+  }, {
+    title: 'Action',
+    width: 'auto',
+    dataIndex: 'id',
+    render: () => (
+      <Space size={'middle'}>
+        <StarFilled style={{ fontSize: '18px', cursor: 'pointer' }} />
+      </Space>)
 
-    // }
-  ]
-
+  }]
 
   return (
 
@@ -255,7 +245,6 @@ export default function TableWithCheckboxes({ tableData }) {
             colorBgContainer: 'var(--background-color)',
             colorText: 'var(--table-text-color)',
             motionDurationMid: '0'
-            // colorPrimary: '#fca311'
           },
           components: {
             Table: {
@@ -275,9 +264,6 @@ export default function TableWithCheckboxes({ tableData }) {
           columns={columns}
           dataSource={finalData}
           scroll={scroll}
-          // scroll={{
-          //   x: 1300,
-          // }}
           rowSelection={{
             type: 'checkbox',
             columnWidth: '32px',
